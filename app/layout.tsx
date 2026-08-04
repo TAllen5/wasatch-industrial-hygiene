@@ -1,2 +1,25 @@
-export const metadata={title:"Wasatch Industrial Hygiene and Safety",description:"Industrial hygiene and occupational safety consulting."};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html><body>{children}</body></html>}
+export const metadata = {
+  title: "Wasatch Industrial Hygiene & Safety | CIH CSP Consulting",
+  description:
+    "Wasatch Industrial Hygiene & Safety provides industrial hygiene, OSHA compliance, safety consulting, training, and occupational health support throughout the western United States.",
+  keywords: [
+    "industrial hygiene consultant",
+    "Certified Industrial Hygienist",
+    "CSP safety consultant",
+    "OSHA compliance",
+    "workplace exposure assessment",
+    "occupational health"
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
