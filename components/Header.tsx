@@ -7,6 +7,10 @@ export default function Header() {
           <a href="/">Home</a>
           <a href="/services">Services</a>
           <a href="/industries">Industries</a>
+          <a href="/experience">Experience</a>
+          <a href="/capability">Capability</a>
+          <a href="/faq">FAQ</a>
+          <a href="/about">About</a>
           <a href="/contact">Contact</a>
         </nav>
       </div>
