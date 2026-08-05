@@ -13,10 +13,9 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "tailwindcss": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
-  }
+  "typescript": "latest",
+  "tailwindcss": "latest",
+  "@types/node": "latest",
+  "@types/react": "latest",
+  "@types/react-dom": "latest"
 }
