@@ -1,13 +1,2 @@
-export default function CapabilityPage() {
-  return (
-    <main className="container mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold">Capability Statement</h1>
-      <p className="mt-4 text-lg">Wasatch Industrial Hygiene and Safety delivers industrial hygiene, safety consulting, training, and occupational health support across a wide range of industries.</p>
-      <div className="mt-8 space-y-4">
-        <p><strong>Credentials:</strong> Certified Industrial Hygienist (CIH) and Certified Safety Professional (CSP).</p>
-        <p><strong>Services:</strong> Exposure assessments, OSHA compliance support, safety programs, training, and medical surveillance coordination.</p>
-        <p><strong>Markets:</strong> Manufacturing, construction, healthcare, laboratories, government, defense, energy, and general industry.</p>
-      </div>
-    </main>
-  );
-}
+import Link from "next/link";
+export default function CapabilityPage(){return <main><section className="page-hero"><div className="shell"><p className="eyebrow">Capability Statement</p><h1>Credentialed expertise. Direct access.</h1><p>Industrial hygiene, occupational safety, and medical-surveillance support delivered with the responsiveness of a specialized consulting firm.</p></div></section><section className="section shell capability-grid"><div><p className="eyebrow dark">Core capabilities</p><h2>Workplace health and safety support from assessment through implementation.</h2><ul className="capability-list"><li>Industrial hygiene exposure assessment and air monitoring</li><li>Noise surveys, dosimetry, and hearing-conservation support</li><li>OSHA compliance reviews and written safety programs</li><li>Ventilation and engineering-control evaluations</li><li>Respiratory-protection program support</li><li>Medical-surveillance and occupational-health coordination</li><li>Hazard-specific training and field implementation tools</li></ul></div><aside className="facts-card"><h3>Company profile</h3><dl><dt>Principal</dt><dd>Thomas J. Allen, CIH, CSP</dd><dt>Credentials</dt><dd>Certified Industrial Hygienist<br/>Certified Safety Professional</dd><dt>Service area</dt><dd>Western United States</dd><dt>Business</dt><dd>Wasatch Industrial Hygiene and Safety, LLC</dd><dt>Contact</dt><dd>(435) 830-4444<br/>wasatch.ihandsafety@gmail.com</dd></dl><Link className="button" href="/contact">Request Capabilities</Link></aside></section></main>}
