@@ -1,14 +1,1 @@
-export default function ContactPage() {
-  return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-4xl font-bold">Request an Assessment</h1>
-      <p className="mt-6 text-lg">
-        Contact Wasatch Industrial Hygiene and Safety for industrial hygiene consulting, safety support, and workplace hazard evaluations.
-      </p>
-      <div className="mt-8">
-        <p>Phone: (435) 830-4444</p>
-        <p className="mt-2">Serving clients throughout the western United States.</p>
-      </div>
-    </main>
-  );
-}
+export default function ContactPage() { return <main><section className="page-hero"><div className="shell"><p className="eyebrow">Contact</p><h1>Let’s talk about your workplace.</h1><p>Share the challenge, upcoming project, or compliance question you are working through.</p></div></section><section className="section shell contact-grid"><div><h2>Request a consultation</h2><p className="lead">For the quickest response, call or email directly. We serve clients throughout Utah and the Western United States.</p><div className="contact-card"><p><strong>Phone</strong><a href="tel:+14358304444">(435) 830-4444</a></p><p><strong>Email</strong><a href="mailto:wasatch.ihandsafety@gmail.com">wasatch.ihandsafety@gmail.com</a></p><p><strong>Service area</strong><span>Western United States</span></p></div></div><form action="mailto:wasatch.ihandsafety@gmail.com" method="post" encType="text/plain" className="contact-form"><label>Name<input name="name" required /></label><label>Company<input name="company" /></label><label>Email<input type="email" name="email" required /></label><label>Phone<input type="tel" name="phone" /></label><label>How can we help?<textarea name="message" rows={6} required /></label><button className="button" type="submit">Send Inquiry</button><small>Submitting opens your email application with the inquiry details.</small></form></section></main> }
