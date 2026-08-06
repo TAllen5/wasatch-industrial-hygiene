@@ -1,3 +1,5 @@
+export const metadata = { title: "Industries", description: "Industrial hygiene and safety consulting for manufacturing, aerospace, construction, energy, laboratories, healthcare, government, and general industry." };
+
 const industries=[
   ["Manufacturing","Machining, welding, coating, chemical use, ceramics, assembly, maintenance and material handling."],
   ["Aerospace & Defense","Complex production environments, specialized materials, energetic or high-hazard processes, and stringent customer requirements."],
