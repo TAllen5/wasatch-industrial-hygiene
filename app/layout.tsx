@@ -32,10 +32,6 @@ const organizationSchema = {
   telephone: "+1-435-830-4444",
   email: "wasatch.ihandsafety@gmail.com",
   areaServed: ["Utah", "Idaho", "Nevada", "Arizona", "Colorado", "Wyoming", "Montana", "California"],
-  employee: [
-    { "@type": "Person", name: "Thomas J. Allen", honorificSuffix: "CIH, CSP", jobTitle: "Founder and Principal Consultant" },
-    { "@type": "Person", name: "Bailey Allen", honorificSuffix: "RN", jobTitle: "Medical Surveillance and Occupational Health" },
-  ],
 };
 
 export default function RootLayout({
