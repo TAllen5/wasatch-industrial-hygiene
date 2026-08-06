@@ -14,3 +14,6 @@
 @media(max-width:1050px){.brand img{width:260px}.nav-wrap{gap:20px}.desktop-nav{gap:18px}.button-small{padding:10px 12px}}
 @media(max-width:900px){.nav-wrap{height:94px}.brand img{width:300px;height:80px}.contact-private{grid-template-columns:1fr}.contact-visual{min-height:360px}.footer-logo{width:300px}}
 @media(max-width:600px){.nav-wrap{height:82px}.brand img{width:210px;height:68px}.footer-logo-wrap{padding:8px}.footer-logo{width:245px;height:92px}.principal-card h2{font-size:40px}}
+
+/* Lake Powell homepage identity */
+.hero{background:linear-gradient(105deg,rgba(7,30,43,.94) 8%,rgba(7,30,43,.72) 48%,rgba(7,30,43,.2)),url('https://images.unsplash.com/photo-1649288784915-1a8d9debd5ce?auto=format&fit=crop&fm=jpg&q=82&w=2400') center 48%/cover}.mountain-panel{background:linear-gradient(rgba(9,40,53,.18),rgba(9,40,53,.72)),url('https://images.unsplash.com/photo-1722391129635-803d2230b988?auto=format&fit=crop&fm=jpg&q=82&w=1400') center/cover}.lake-contact{background:linear-gradient(90deg,rgba(7,30,43,.94),rgba(7,30,43,.45)),url('https://images.unsplash.com/photo-1649288784915-1a8d9debd5ce?auto=format&fit=crop&fm=jpg&q=82&w=2000') center/cover}.section-tint{background:linear-gradient(180deg,#f5eee4,#f2eee5)}.service-card{border-top-color:#c56f3c}.service-card>span{color:#b55d31}
