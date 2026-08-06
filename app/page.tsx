@@ -3,7 +3,7 @@ import Link from "next/link";
 const services = [
   ["Industrial Hygiene", "Exposure assessments, air monitoring, noise surveys, chemical evaluations, ventilation reviews, and clear recommendations."],
   ["Safety & OSHA Compliance", "Program development, gap assessments, audits, JSAs, incident investigations, and practical corrective actions."],
-  ["Medical Surveillance", "RN-led support from Bailey Allen, including biological monitoring, surveillance coordination, and occupational-health follow-through."],
+  ["Medical Surveillance", "RN-led biological monitoring, program coordination, and occupational-health follow-through."],
   ["Training", "Facility-specific instruction for supervisors and employees, built around your hazards, processes, and compliance obligations."],
 ];
 
@@ -30,7 +30,7 @@ export default function Home() {
 
     <section className="section shell"><div className="section-heading"><div><p className="eyebrow dark">When to call Wasatch</p><h2>Bring us in before the problem gets expensive.</h2></div></div><div className="trigger-grid">{triggers.map(([title,copy])=><article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
 
-    <section className="section shell trust-grid"><div className="mountain-panel"><p className="eyebrow">Why Wasatch</p><h2>Built for the field.</h2></div><div className="trust-copy"><p className="eyebrow dark">Two disciplines. One coordinated answer.</p><h3>Industrial hygiene, safety, and occupational health expertise</h3><p><strong>Thomas J. Allen, CIH, CSP</strong> leads exposure assessment, safety, compliance, and control strategy. <strong>Bailey Allen, RN</strong> leads medical-surveillance and biological-monitoring support, connecting workplace exposure information with occupational-health follow-through.</p><ul><li>Independent, defensible evaluations</li><li>Clear reports and prioritized actions</li><li>Coordinated IH and medical surveillance</li><li>Responsive Western U.S. support</li></ul><Link className="text-link" href="/about">Meet the team →</Link></div></section>
+    <section className="section shell trust-grid"><div className="mountain-panel"><p className="eyebrow">Why Wasatch</p><h2>Built for the field.</h2></div><div className="trust-copy"><p className="eyebrow dark">Coordinated expertise</p><h3>Industrial hygiene, safety, and occupational health</h3><p>Credentialed technical and clinical perspectives provide a clear path from hazard evaluation through employee follow-through.</p><ul><li>Independent, defensible evaluations</li><li>Clear reports and prioritized actions</li><li>Coordinated medical surveillance</li><li>Responsive Western U.S. support</li></ul><Link className="text-link" href="/about">About Wasatch →</Link></div></section>
 
     <section className="section section-tint"><div className="shell"><div className="section-intro"><p className="eyebrow dark">A straightforward engagement</p><h2>From first call to usable action.</h2></div><div className="steps-grid"><article><span>01</span><h3>Define the decision</h3><p>We clarify the concern, process, timeline, and information you need.</p></article><article><span>02</span><h3>Evaluate the work</h3><p>We review records, observe tasks, collect data, and speak with the right people.</p></article><article><span>03</span><h3>Prioritize action</h3><p>You receive clear findings, practical controls, and the next steps that matter most.</p></article></div></div></section>
 
