@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "",
     "/services",
+    "/medical-surveillance",
     "/industries",
     "/about",
     "/experience",
