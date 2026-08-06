@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const metadata = { title: "Services", description: "Industrial hygiene, exposure assessment, noise, ventilation, OSHA compliance, respiratory protection, training, and medical-surveillance support." };
+
 const services = [
   {n:"01",title:"Industrial Hygiene & Exposure Assessment",intro:"Understand what employees are exposed to, how much, and what controls will make the greatest difference.",items:["Personal and area air sampling","Chemical and particulate exposure assessments","Lead, silica, welding fume, solvents and isocyanates","Exposure-control recommendations and technical reports"]},
   {n:"02",title:"Noise & Hearing Conservation",intro:"Move beyond a spot sound-level reading to a defensible picture of employee noise exposure.",items:["Full-shift noise dosimetry","Equipment and process sound-level surveys","Facility noise mapping","Hearing-conservation program evaluation"]},
