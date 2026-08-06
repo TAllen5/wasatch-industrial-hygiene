@@ -1,4 +1,5 @@
 import Link from "next/link";
+export const metadata = { title: "Experience", description: "Representative industrial hygiene, noise, ventilation, high-hazard work, safety-program, and occupational-health consulting experience." };
 const work=[
   ["Exposure characterization","Designing and conducting sampling for welding fume, metals, solvents, particulates, lead, silica, isocyanates, and other process-specific contaminants."],
   ["Noise risk reduction","Combining dosimetry, sound-level mapping, task observation, hearing-protection review, and engineering-control priorities."],
