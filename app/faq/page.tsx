@@ -1,3 +1,5 @@
+export const metadata = { title: "Frequently Asked Questions", description: "Answers about industrial hygiene assessments, air and noise sampling, OSHA support, ventilation, medical surveillance, and service coverage." };
+
 const faqs=[
   ["When should we contact an industrial hygienist?","When introducing a new chemical or process, investigating employee concerns, evaluating ventilation, determining whether PPE is needed, responding to an exposure result, or establishing a defensible baseline before problems occur."],
   ["What happens during an exposure assessment?","We review the process and safety information, observe the work, identify exposure pathways and similar exposure groups, select an appropriate sampling strategy, collect representative data, interpret the results, and provide prioritized recommendations."],
