@@ -1,13 +1,10 @@
-export default function ExperiencePage() {
-  return (
-    <main className="container mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold">Representative Experience</h1>
-      <p className="mt-4 text-lg">Wasatch Industrial Hygiene and Safety provides practical industrial hygiene and safety solutions based on real-world manufacturing and operational experience.</p>
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        <section><h2 className="text-xl font-semibold">Exposure Assessments</h2><p>Air monitoring, chemical exposure evaluations, noise assessments, and hazard characterization.</p></section>
-        <section><h2 className="text-xl font-semibold">Safety Improvements</h2><p>Program development, hazard reviews, and practical risk reduction solutions.</p></section>
-        <section><h2 className="text-xl font-semibold">Compliance Support</h2><p>OSHA-focused consulting to help organizations improve workplace safety.</p></section>
-      </div>
-    </main>
-  );
-}
+import Link from "next/link";
+const work=[
+  ["Exposure characterization","Designing and conducting sampling for welding fume, metals, solvents, particulates, lead, silica, isocyanates, and other process-specific contaminants."],
+  ["Noise risk reduction","Combining dosimetry, sound-level mapping, task observation, hearing-protection review, and engineering-control priorities."],
+  ["High-hazard process review","Evaluating confined-space entry, LOTO, hot work, fall protection, electrical work, contractor controls, and non-routine maintenance."],
+  ["Industrial ventilation","Assessing capture performance, airflow direction, hood placement, process enclosure, and opportunities to control contaminants at the source."],
+  ["Program implementation","Turning requirements into written programs, training, forms, inspections, permits, and supervisor expectations that can be sustained."],
+  ["Occupational-health coordination","Connecting exposure findings with medical-surveillance requirements, employee communication, follow-up, and recordkeeping."],
+];
+export default function ExperiencePage(){return <main><section className="page-hero welding-hero"><div className="shell"><p className="eyebrow">Representative Experience</p><h1>Technical rigor grounded in operations.</h1><p>Support for real production environments where safety, quality, schedule, and employee protection must work together.</p></div></section><section className="section shell"><div className="section-intro"><h2>Problems we help clients solve</h2><p className="lead">Wasatch approaches each project by understanding the process, the workforce, the exposure pathway, and the operational constraints before recommending controls.</p></div><div className="experience-list">{work.map(([title,copy],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div><div className="center-action"><Link className="button" href="/contact">Discuss a Similar Challenge</Link></div></section></main>}
