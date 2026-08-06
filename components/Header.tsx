@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="nav-wrap">
-        <Link href="/" className="brand"><img src="/logo.svg" alt="Wasatch Industrial Hygiene & Safety" /></Link>
+        <Link href="/" className="brand"><img src="/wasatch-logo.png" alt="Wasatch Industrial Hygiene and Safety, LLC" /></Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/services">Services</Link><Link href="/industries">Industries</Link><Link href="/about">About</Link><Link href="/faq">FAQ</Link>
