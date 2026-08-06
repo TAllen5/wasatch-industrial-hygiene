@@ -1,37 +1,14 @@
-export default function ServicesPage() {
-  const services = [
-    {
-      title: "Industrial Hygiene Consulting",
-      items: ["Exposure assessments", "Air monitoring", "Chemical hazard evaluations", "Noise surveys", "Workplace hazard evaluations"],
-    },
-    {
-      title: "Safety Consulting",
-      items: ["OSHA compliance support", "Written safety programs", "Job hazard analyses", "Incident investigations", "Safety audits"],
-    },
-    {
-      title: "Occupational Health Support",
-      items: ["Medical surveillance coordination", "Respiratory protection support", "Hearing conservation", "Employee health programs"],
-    },
-    {
-      title: "Training Services",
-      items: ["OSHA awareness training", "Supervisor training", "Hazard-specific training", "Custom facility training"],
-    },
-  ];
+import Link from "next/link";
 
-  return (
-    <main className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="text-5xl font-bold">Industrial Hygiene & Safety Services</h1>
-      <p className="mt-6 max-w-3xl text-lg">Wasatch Industrial Hygiene & Safety provides practical consulting solutions that help organizations identify hazards, improve compliance, and protect their workforce.</p>
-      <section className="mt-12 grid gap-8 md:grid-cols-2">
-        {services.map((service) => (
-          <div key={service.title} className="rounded-xl border p-6">
-            <h2 className="text-2xl font-semibold">{service.title}</h2>
-            <ul className="mt-4 list-disc pl-6">
-              {service.items.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        ))}
-      </section>
-    </main>
-  );
-}
+const services = [
+  {n:"01",title:"Industrial Hygiene & Exposure Assessment",intro:"Understand what employees are exposed to, how much, and what controls will make the greatest difference.",items:["Personal and area air sampling","Chemical and particulate exposure assessments","Lead, silica, welding fume, solvents and isocyanates","Exposure-control recommendations and technical reports"]},
+  {n:"02",title:"Noise & Hearing Conservation",intro:"Move beyond a spot sound-level reading to a defensible picture of employee noise exposure.",items:["Full-shift noise dosimetry","Equipment and process sound-level surveys","Facility noise mapping","Hearing-conservation program evaluation"]},
+  {n:"03",title:"Ventilation & Engineering Controls",intro:"Evaluate whether local exhaust and process controls capture contaminants where they are generated.",items:["Local exhaust ventilation assessments","Smoke visualization and airflow studies","Fume hood and capture-system reviews","Control selection and verification sampling"]},
+  {n:"04",title:"Safety & OSHA Compliance",intro:"Translate regulatory requirements into programs and practices that fit the way your operation actually works.",items:["Compliance and gap assessments","Written safety programs and procedures","Job hazard analyses and risk assessments","Incident investigation and corrective-action support"]},
+  {n:"05",title:"Respiratory Protection",intro:"Build a complete, defensible respiratory-protection program around the hazards and respirators at your facility.",items:["Program development and annual review","Hazard evaluation and respirator selection","Fit-testing program support","Cartridge-change schedule development"]},
+  {n:"06",title:"Medical Surveillance & Occupational Health",intro:"Coordinate exposure information, regulatory triggers, and occupational-health follow-through.",items:["Medical-surveillance program coordination","Lead, respiratory and hearing-conservation support","Employee notification and follow-up processes","RN-supported occupational-health consultation"]},
+  {n:"07",title:"Training & Program Development",intro:"Give employees and supervisors training that reflects their equipment, materials, tasks, and responsibilities.",items:["Hazard-specific employee training","Supervisor and competent-person training","Customized written programs","Practical forms, permits and field tools"]},
+  {n:"08",title:"Confined Space, LOTO & High-Hazard Work",intro:"Strengthen the planning and controls used for complex maintenance, contractor, and non-routine work.",items:["Permit-required confined-space evaluations","Lockout/tagout procedure development","Hot work and fall-protection reviews","Contractor safety and permitting systems"]},
+];
+
+export default function ServicesPage(){return <main><section className="page-hero industrial-hero"><div className="shell"><p className="eyebrow">Services</p><h1>From exposure data to practical control.</h1><p>Technical industrial hygiene, occupational safety, and medical-surveillance support tailored to your processes and workforce.</p></div></section><section className="section shell"><div className="section-intro"><p className="eyebrow dark">Full-service support</p><h2>Clear answers for complex workplace hazards.</h2><p className="lead">Engagements can range from a focused exposure assessment to ongoing program support. Every project is scoped around the decisions you need to make.</p></div><div className="detail-grid">{services.map(s=><article className="detail-card" key={s.title}><span>{s.n}</span><h3>{s.title}</h3><p>{s.intro}</p><ul>{s.items.map(i=><li key={i}>{i}</li>)}</ul></article>)}</div></section><section className="cta"><div className="shell cta-inner"><div><p className="eyebrow">Not sure where to begin?</p><h2>Start with the hazard, concern, or compliance question.</h2></div><Link className="button button-light" href="/contact">Discuss Your Project</Link></div></section></main>}
