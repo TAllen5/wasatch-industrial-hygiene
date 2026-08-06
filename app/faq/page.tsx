@@ -1,35 +1,11 @@
-export default function FAQPage() {
-  const faqs = [
-    {
-      q: "When should a company contact an industrial hygienist?",
-      a: "Organizations often engage industrial hygiene support when evaluating workplace exposures, introducing new processes, responding to concerns, or strengthening compliance programs."
-    },
-    {
-      q: "What industries does Wasatch support?",
-      a: "Wasatch supports a wide range of industries including manufacturing, construction, healthcare, laboratories, government, defense, energy, and general industry."
-    },
-    {
-      q: "Can Wasatch help with OSHA compliance?",
-      a: "Yes. Wasatch provides practical compliance support including hazard evaluations, program reviews, exposure assessments, and safety improvement recommendations."
-    },
-    {
-      q: "Does Wasatch support medical surveillance programs?",
-      a: "Yes. Wasatch supports occupational health programs through industrial hygiene expertise and coordination of medical surveillance needs."
-    }
-  ];
-
-  return (
-    <main className="min-h-screen p-10">
-      <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-      <p className="mt-4">Common questions about industrial hygiene and safety consulting services.</p>
-      <div className="mt-8 space-y-6">
-        {faqs.map((item) => (
-          <section key={item.q}>
-            <h2 className="text-xl font-semibold">{item.q}</h2>
-            <p className="mt-2">{item.a}</p>
-          </section>
-        ))}
-      </div>
-    </main>
-  );
-}
+const faqs=[
+  ["When should we contact an industrial hygienist?","When introducing a new chemical or process, investigating employee concerns, evaluating ventilation, determining whether PPE is needed, responding to an exposure result, or establishing a defensible baseline before problems occur."],
+  ["What happens during an exposure assessment?","We review the process and safety information, observe the work, identify exposure pathways and similar exposure groups, select an appropriate sampling strategy, collect representative data, interpret the results, and provide prioritized recommendations."],
+  ["Can you perform air and noise sampling?","Yes. Services include personal and area air sampling, full-shift noise dosimetry, sound-level surveys, task-based assessment, and interpretation against applicable occupational exposure limits."],
+  ["Do you only work with large companies?","No. Wasatch supports organizations of different sizes, from a focused single-process evaluation to broader multi-department compliance and program support."],
+  ["Can you help after an OSHA inspection or employee complaint?","Yes. We can help evaluate the underlying hazard, organize exposure information, identify corrective actions, strengthen programs, and support a technically sound response. Legal strategy should be coordinated with qualified counsel."],
+  ["Does Wasatch support medical-surveillance programs?","Yes. We help determine program triggers, coordinate exposure information, align surveillance with applicable standards, develop employee-notification processes, and connect clients with RN-supported occupational-health expertise."],
+  ["Can you review local exhaust ventilation?","Yes. We evaluate hood placement, capture, airflow direction, process enclosure, work practices, and whether the system is controlling contaminants where they are generated. Verification sampling can be included where appropriate."],
+  ["Where do you provide services?","Wasatch is based in Utah and serves clients throughout the Western United States. Travel and project logistics are addressed during scoping."],
+];
+export default function FAQPage(){return <main><section className="page-hero"><div className="shell"><p className="eyebrow">FAQ</p><h1>What clients commonly ask.</h1><p>Straightforward answers about industrial hygiene, safety consulting, sampling, and occupational-health support.</p></div></section><section className="section shell faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</section></main>}
