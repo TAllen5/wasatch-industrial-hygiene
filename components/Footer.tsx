@@ -12,7 +12,7 @@ export default function Footer() {
         <div>
           <p className="font-bold text-white">Explore</p>
           <div className="mt-4 grid gap-2 text-sm">
-            <Link href="/services">Services</Link><Link href="/industries">Industries</Link><Link href="/about">About</Link><Link href="/faq">FAQ</Link>
+            <Link href="/services">Services</Link><Link href="/industries">Industries</Link><Link href="/about">About</Link><Link href="/faq">FAQ</Link><Link href="/privacy">Privacy</Link>
           </div>
         </div>
         <div>

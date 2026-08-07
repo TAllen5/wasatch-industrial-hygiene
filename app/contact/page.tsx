@@ -1,3 +1,35 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Request a Consultation", description: "Contact Wasatch Industrial Hygiene and Safety for exposure monitoring, safety support, OSHA compliance, and medical surveillance services." };
-export default function ContactPage(){return <main><section className="bg-slate-950 py-24 text-white"><div className="shell"><p className="eyebrow text-sky-300">Contact</p><h1 className="page-title mt-5 max-w-4xl">Tell us what’s happening at your workplace.</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300">Share the operation, concern, location, and timing. We’ll help you identify the right next step.</p></div></section><section className="shell grid gap-12 py-24 lg:grid-cols-[.75fr_1.25fr]"><div><h2 className="text-3xl font-extrabold text-slate-950">Start directly</h2><p className="mt-5 leading-7 text-slate-600">For urgent scheduling questions or a quick discussion, call or email. Wasatch supports clients throughout the Western United States.</p><div className="mt-8 grid gap-5"><div><p className="eyebrow text-slate-500">Phone</p><a className="mt-2 block text-xl font-extrabold text-sky-900" href="tel:+14358304444">(435) 830-4444</a></div><div><p className="eyebrow text-slate-500">Email</p><a className="mt-2 block break-all text-lg font-extrabold text-sky-900" href="mailto:wasatch.ihandsafety@gmail.com">wasatch.ihandsafety@gmail.com</a></div><div><p className="eyebrow text-slate-500">Coverage</p><p className="mt-2 font-bold text-slate-800">Utah & the Western United States</p></div></div></div><form action="mailto:wasatch.ihandsafety@gmail.com" method="post" encType="text/plain" className="card grid gap-5 p-7 md:p-10"><div className="grid gap-5 sm:grid-cols-2"><label>Full name<input name="Name" autoComplete="name" required /></label><label>Company<input name="Company" autoComplete="organization" /></label></div><div className="grid gap-5 sm:grid-cols-2"><label>Email<input type="email" name="Email" autoComplete="email" required /></label><label>Phone<input type="tel" name="Phone" autoComplete="tel" /></label></div><label>Service needed<select name="Service" defaultValue=""><option value="" disabled>Select a service</option><option>Industrial hygiene / exposure monitoring</option><option>Safety / OSHA compliance</option><option>Medical surveillance support</option><option>Training</option><option>Not sure yet</option></select></label><label>How can we help?<textarea name="Project details" rows={6} placeholder="Describe the process, concern, facility location, and desired timing." required /></label><button type="submit" className="button button-primary justify-self-start">Prepare Consultation Email</button><p className="text-xs leading-5 text-slate-500">Submitting opens your email application with the information you entered. You can review it before sending.</p></form></section></main>}
+import ConsultationForm from "./ConsultationForm";
+
+export const metadata: Metadata = { title: "Request a Consultation", description: "Request a professional consultation for exposure monitoring, safety support, OSHA compliance, training, or medical surveillance services." };
+
+const expectations = [
+  ["Direct professional review", "Your request is reviewed by the consulting team—not routed through a generic call center."],
+  ["A focused first conversation", "We’ll clarify the operation, risk, desired outcome, and timing before recommending scope."],
+  ["Practical next steps", "You’ll leave the initial discussion with a clearer path, even when the right answer is a focused assessment."],
+];
+
+export default function ContactPage() {
+  return (
+    <main>
+      <section className="bg-slate-950 py-24 text-white">
+        <div className="shell grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+          <div><p className="eyebrow text-sky-300">Request a consultation</p><h1 className="page-title mt-5 max-w-4xl">Bring us the concern. We’ll help define the right next step.</h1></div>
+          <p className="text-lg leading-8 text-slate-300">Whether you’re responding to an exposure question, preparing for a project, or strengthening a program, start with the facts you have. We’ll help organize what comes next.</p>
+        </div>
+      </section>
+
+      <section className="shell grid gap-12 py-24 lg:grid-cols-[.72fr_1.28fr] lg:items-start">
+        <aside className="lg:sticky lg:top-36">
+          <p className="eyebrow text-orange-700">What to expect</p>
+          <h2 className="mt-4 text-3xl font-extrabold text-slate-950">A useful conversation from the start.</h2>
+          <div className="mt-8 grid gap-7">{expectations.map(([title, copy]) => <div key={title} className="border-l-2 border-orange-500 pl-5"><h3 className="font-extrabold text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{copy}</p></div>)}</div>
+          <div className="mt-10 rounded-2xl bg-sky-950 p-6 text-white"><p className="eyebrow text-sky-300">Prefer to talk?</p><a className="mt-3 block text-2xl font-extrabold" href="tel:+14358304444">(435) 830-4444</a><a className="mt-3 block break-all text-sm text-slate-300" href="mailto:wasatch.ihandsafety@gmail.com">wasatch.ihandsafety@gmail.com</a><p className="mt-5 border-t border-white/15 pt-5 text-xs leading-5 text-slate-400">Utah-based support for organizations throughout the Western United States.</p></div>
+        </aside>
+        <ConsultationForm />
+      </section>
+
+      <section className="bg-slate-100 py-16"><div className="shell grid gap-8 md:grid-cols-3"><div><p className="eyebrow text-sky-800">Technical credibility</p><p className="mt-3 font-extrabold text-slate-950">CIH- and CSP-led consulting</p></div><div><p className="eyebrow text-sky-800">Operational focus</p><p className="mt-3 font-extrabold text-slate-950">Recommendations built for real work</p></div><div><p className="eyebrow text-sky-800">Regional reach</p><p className="mt-3 font-extrabold text-slate-950">Western U.S. project support</p></div></div></section>
+    </main>
+  );
+}
