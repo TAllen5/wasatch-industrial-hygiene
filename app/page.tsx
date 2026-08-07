@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  { n: "01", title: "Industrial Hygiene", copy: "Exposure assessments, air monitoring, noise surveys, chemical evaluations, ventilation reviews, and defensible reports led by a Certified Industrial Hygienist." },
-  { n: "02", title: "Safety & OSHA Compliance", copy: "Practical audits, written programs, hazard assessments, incident support, and implementation assistance that fit real operations." },
-  { n: "03", title: "Medical Surveillance", copy: "RN-supported coordination for exposure-based medical surveillance, respirator clearance, hearing conservation, and occupational health programs." },
+  { title: "Industrial Hygiene", copy: "Exposure assessments, air monitoring, noise surveys, chemical evaluations, ventilation reviews, and defensible reports led by a Certified Industrial Hygienist." },
+  { title: "Safety & OSHA Compliance", copy: "Practical audits, written programs, hazard assessments, incident support, and implementation assistance that fit real operations." },
+  { title: "Medical Surveillance", copy: "RN-supported coordination for exposure-based medical surveillance, respirator clearance, hearing conservation, and occupational health programs." },
 ];
 
 const industries = ["Aerospace & Defense", "Advanced Manufacturing", "Construction", "Energy & Utilities", "Laboratories", "Healthcare", "Government", "General Industry"];
@@ -36,7 +36,7 @@ export default function Home() {
       <section className="shell py-24">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between"><div><p className="eyebrow text-sky-800">Core services</p><h2 className="section-title mt-3 text-slate-950">One partner across the risk lifecycle.</h2></div><Link href="/services" className="font-extrabold text-sky-800">View all capabilities →</Link></div>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {services.map((service) => <article key={service.title} className="card p-8"><p className="text-sm font-extrabold text-orange-700">{service.n}</p><h3 className="mt-8 text-2xl font-extrabold text-slate-950">{service.title}</h3><p className="mt-4 leading-7 text-slate-600">{service.copy}</p><Link href="/services" className="mt-8 inline-block text-sm font-extrabold text-sky-800">Learn more →</Link></article>)}
+          {services.map((service) => <article key={service.title} className="card p-8"><h3 className="text-2xl font-extrabold text-slate-950">{service.title}</h3><p className="mt-4 leading-7 text-slate-600">{service.copy}</p><Link href="/services" className="mt-8 inline-block text-sm font-extrabold text-sky-800">Learn more →</Link></article>)}
         </div>
       </section>
 
