@@ -1,35 +1,13 @@
-export default function FAQPage() {
-  const faqs = [
-    {
-      q: "When should a company contact an industrial hygienist?",
-      a: "Organizations often engage industrial hygiene support when evaluating workplace exposures, introducing new processes, responding to concerns, or strengthening compliance programs."
-    },
-    {
-      q: "What industries does Wasatch support?",
-      a: "Wasatch supports a wide range of industries including manufacturing, construction, healthcare, laboratories, government, defense, energy, and general industry."
-    },
-    {
-      q: "Can Wasatch help with OSHA compliance?",
-      a: "Yes. Wasatch provides practical compliance support including hazard evaluations, program reviews, exposure assessments, and safety improvement recommendations."
-    },
-    {
-      q: "Does Wasatch support medical surveillance programs?",
-      a: "Yes. Wasatch supports occupational health programs through industrial hygiene expertise and coordination of medical surveillance needs."
-    }
-  ];
-
-  return (
-    <main className="min-h-screen p-10">
-      <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-      <p className="mt-4">Common questions about industrial hygiene and safety consulting services.</p>
-      <div className="mt-8 space-y-6">
-        {faqs.map((item) => (
-          <section key={item.q}>
-            <h2 className="text-xl font-semibold">{item.q}</h2>
-            <p className="mt-2">{item.a}</p>
-          </section>
-        ))}
-      </div>
-    </main>
-  );
-}
+import type { Metadata } from "next";
+import Link from "next/link";
+export const metadata: Metadata = { title: "Frequently Asked Questions", description: "Answers about industrial hygiene consulting, exposure monitoring, service areas, project timing, and medical surveillance support." };
+const faqs=[
+  ["When should we contact an industrial hygienist?","When introducing a new process or chemical, investigating an employee concern, evaluating an exposure, responding to a regulatory issue, selecting controls, or validating that existing controls are effective."],
+  ["Can you perform workplace exposure monitoring?","Yes. Wasatch can help develop a sampling strategy and conduct personal or area monitoring for airborne contaminants and noise, followed by interpretation and a clear technical report."],
+  ["Do you support short-term projects?","Yes. Engagements can range from a focused assessment or single sampling event to ongoing compliance and program support."],
+  ["Can you help us determine what OSHA requires?","Yes. Wasatch evaluates the operation and applicable requirements, identifies gaps, and helps translate those findings into practical corrective actions."],
+  ["How does medical surveillance support work?","Industrial hygiene findings are connected with RN-supported occupational health expertise to help employers identify surveillance needs and coordinate program elements. Clinical services and final medical determinations remain with the appropriate licensed provider."],
+  ["Where do you provide services?","Wasatch is based in Utah and serves clients throughout the Western United States. Travel and multi-site projects can be discussed during the initial consultation."],
+  ["What information should we provide for a quote?","A brief process description, facility location, number of employees or similar exposure groups, target hazards, prior reports or SDSs, desired timing, and the decision you need the work to support."],
+];
+export default function FAQPage(){return <main><section className="bg-slate-950 py-24 text-white"><div className="shell"><p className="eyebrow text-sky-300">FAQ</p><h1 className="page-title mt-5">Straight answers before the work begins.</h1></div></section><section className="shell max-w-4xl py-24"><div className="grid gap-4">{faqs.map(([q,a])=><details key={q} className="card group p-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-extrabold text-slate-950">{q}<span className="text-2xl text-orange-700 group-open:rotate-45">+</span></summary><p className="mt-4 max-w-3xl leading-7 text-slate-600">{a}</p></details>)}</div><div className="mt-14 rounded-2xl bg-slate-100 p-8 text-center"><h2 className="text-2xl font-extrabold text-slate-950">Still deciding what you need?</h2><p className="mt-3 text-slate-600">A short conversation is often enough to define the appropriate scope.</p><Link href="/contact" className="button button-primary mt-6">Ask a Question</Link></div></section></main>}

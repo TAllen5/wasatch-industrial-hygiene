@@ -1,14 +1,3 @@
-export default function ContactPage() {
-  return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-4xl font-bold">Request an Assessment</h1>
-      <p className="mt-6 text-lg">
-        Contact Wasatch Industrial Hygiene and Safety for industrial hygiene consulting, safety support, and workplace hazard evaluations.
-      </p>
-      <div className="mt-8">
-        <p>Phone: (435) 830-4444</p>
-        <p className="mt-2">Serving clients throughout the western United States.</p>
-      </div>
-    </main>
-  );
-}
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "Request a Consultation", description: "Contact Wasatch Industrial Hygiene and Safety for exposure monitoring, safety support, OSHA compliance, and medical surveillance services." };
+export default function ContactPage(){return <main><section className="bg-slate-950 py-24 text-white"><div className="shell"><p className="eyebrow text-sky-300">Contact</p><h1 className="page-title mt-5 max-w-4xl">Tell us what’s happening at your workplace.</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300">Share the operation, concern, location, and timing. We’ll help you identify the right next step.</p></div></section><section className="shell grid gap-12 py-24 lg:grid-cols-[.75fr_1.25fr]"><div><h2 className="text-3xl font-extrabold text-slate-950">Start directly</h2><p className="mt-5 leading-7 text-slate-600">For urgent scheduling questions or a quick discussion, call or email. Wasatch supports clients throughout the Western United States.</p><div className="mt-8 grid gap-5"><div><p className="eyebrow text-slate-500">Phone</p><a className="mt-2 block text-xl font-extrabold text-sky-900" href="tel:+14358304444">(435) 830-4444</a></div><div><p className="eyebrow text-slate-500">Email</p><a className="mt-2 block break-all text-lg font-extrabold text-sky-900" href="mailto:wasatch.ihandsafety@gmail.com">wasatch.ihandsafety@gmail.com</a></div><div><p className="eyebrow text-slate-500">Coverage</p><p className="mt-2 font-bold text-slate-800">Utah & the Western United States</p></div></div></div><form action="mailto:wasatch.ihandsafety@gmail.com" method="post" encType="text/plain" className="card grid gap-5 p-7 md:p-10"><div className="grid gap-5 sm:grid-cols-2"><label>Full name<input name="Name" autoComplete="name" required /></label><label>Company<input name="Company" autoComplete="organization" /></label></div><div className="grid gap-5 sm:grid-cols-2"><label>Email<input type="email" name="Email" autoComplete="email" required /></label><label>Phone<input type="tel" name="Phone" autoComplete="tel" /></label></div><label>Service needed<select name="Service" defaultValue=""><option value="" disabled>Select a service</option><option>Industrial hygiene / exposure monitoring</option><option>Safety / OSHA compliance</option><option>Medical surveillance support</option><option>Training</option><option>Not sure yet</option></select></label><label>How can we help?<textarea name="Project details" rows={6} placeholder="Describe the process, concern, facility location, and desired timing." required /></label><button type="submit" className="button button-primary justify-self-start">Prepare Consultation Email</button><p className="text-xs leading-5 text-slate-500">Submitting opens your email application with the information you entered. You can review it before sending.</p></form></section></main>}

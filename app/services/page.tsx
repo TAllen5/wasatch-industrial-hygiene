@@ -1,37 +1,13 @@
-export default function ServicesPage() {
-  const services = [
-    {
-      title: "Industrial Hygiene Consulting",
-      items: ["Exposure assessments", "Air monitoring", "Chemical hazard evaluations", "Noise surveys", "Workplace hazard evaluations"],
-    },
-    {
-      title: "Safety Consulting",
-      items: ["OSHA compliance support", "Written safety programs", "Job hazard analyses", "Incident investigations", "Safety audits"],
-    },
-    {
-      title: "Occupational Health Support",
-      items: ["Medical surveillance coordination", "Respiratory protection support", "Hearing conservation", "Employee health programs"],
-    },
-    {
-      title: "Training Services",
-      items: ["OSHA awareness training", "Supervisor training", "Hazard-specific training", "Custom facility training"],
-    },
-  ];
+import type { Metadata } from "next";
+import Link from "next/link";
 
-  return (
-    <main className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="text-5xl font-bold">Industrial Hygiene & Safety Services</h1>
-      <p className="mt-6 max-w-3xl text-lg">Wasatch Industrial Hygiene & Safety provides practical consulting solutions that help organizations identify hazards, improve compliance, and protect their workforce.</p>
-      <section className="mt-12 grid gap-8 md:grid-cols-2">
-        {services.map((service) => (
-          <div key={service.title} className="rounded-xl border p-6">
-            <h2 className="text-2xl font-semibold">{service.title}</h2>
-            <ul className="mt-4 list-disc pl-6">
-              {service.items.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        ))}
-      </section>
-    </main>
-  );
-}
+export const metadata: Metadata = { title: "Industrial Hygiene & Safety Services", description: "Exposure monitoring, OSHA compliance, safety programs, training, and medical surveillance support for Western U.S. employers." };
+
+const groups = [
+  { title: "Industrial Hygiene & Exposure Science", intro: "Characterize workplace exposures and make confident control decisions with CIH-led technical support.", items: ["Personal and area air monitoring", "Noise dosimetry and sound mapping", "Respiratory hazard and program evaluations", "Chemical and SDS risk assessments", "Ventilation and local exhaust reviews", "Exposure control plans and technical reports"] },
+  { title: "Safety & OSHA Compliance", intro: "Close program gaps with solutions that work in the field—not policies that sit on a shelf.", items: ["Facility compliance audits", "Written safety and health programs", "Job hazard analyses and JSAs", "Incident investigation and corrective actions", "Confined space and LOTO support", "Contractor and project safety planning"] },
+  { title: "Occupational Health & Medical Surveillance", intro: "Connect exposure findings to effective, well-coordinated occupational health programs.", items: ["Exposure-based surveillance program design", "Respirator medical evaluation coordination", "Hearing conservation support", "Blood lead and chemical-specific surveillance", "Recordkeeping and employee notification support", "RN occupational health consultation"] },
+  { title: "Training & Program Implementation", intro: "Give employees and supervisors clear, relevant instruction tied to their actual work.", items: ["OSHA-required awareness training", "Hazard-specific workforce training", "Supervisor and competent-person development", "Custom facility and process content", "Program rollout and implementation support", "Training materials and documentation"] },
+];
+
+export default function ServicesPage() { return <main><section className="bg-slate-950 py-24 text-white"><div className="shell"><p className="eyebrow text-sky-300">Capabilities</p><h1 className="page-title mt-5 max-w-4xl">Technical depth without unnecessary complexity.</h1><p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300">Targeted consulting support for immediate exposure questions, regulatory gaps, and long-term program improvement.</p></div></section><section className="shell py-24"><div className="grid gap-8 lg:grid-cols-2">{groups.map((group,i)=><article key={group.title} className="card p-8 md:p-10"><p className="text-sm font-extrabold text-orange-700">0{i+1}</p><h2 className="mt-5 text-3xl font-extrabold text-slate-950">{group.title}</h2><p className="mt-4 leading-7 text-slate-600">{group.intro}</p><ul className="prose-list mt-7 grid gap-3 text-slate-700">{group.items.map(x=><li key={x}>{x}</li>)}</ul></article>)}</div></section><section className="bg-slate-100 py-20"><div className="shell flex flex-col gap-7 md:flex-row md:items-center md:justify-between"><div><p className="eyebrow text-sky-800">Not sure where to start?</p><h2 className="mt-3 text-3xl font-extrabold text-slate-950">Describe the operation, concern, or deadline.</h2></div><Link href="/contact" className="button button-primary">Discuss Your Project</Link></div></section></main>; }
